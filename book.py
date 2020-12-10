@@ -12,6 +12,8 @@ class stadium:
     total_capacity
     total_seat_available
     total_seats_booked
+    cost=1000
+    total_cost
     
     def seats_available():
         total_seat_available=total_capacity-total_seats_booked
@@ -23,6 +25,7 @@ class stadium:
             print("Enough tickets not available")
             match_schedule()
         else:
+            total_cost=cost*bookings
             total_seats_booked+=bookings
             total_seat_available=total_capacity-total_seats_booked
         
