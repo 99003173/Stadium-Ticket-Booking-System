@@ -15,23 +15,27 @@ df=pd.read_csv("schedule.csv")
 # Input file to see user booking details
 bd=pd.read_csv("booking_details.csv")
 
+
 class seat:
-    match_booked=0
     tot_seat_available = 0
     tot_seats_booked = 0
     def seats_available(self, tot_capacity):
         self.tot_seat_available = tot_capacity - self.tot_seats_booked
-        self.tot_seats_booked += bookings
-    
+        return self.tot_seat_available
+
 class user(seat):
     name=""
     bookings=0
     tot_cost=0
-    def book_ticket(self,cost):
+    match_booked=0
+    def book_ticket(self,cost,tot_capacity):
         self.bookings=int(input("Tickets to Book:"))
-        tot_cost=cost*self.bookings
-        print("Total cost for booking :",tot_cost)
-        
+        if self.bookings <= self.seats_available(tot_capacity):
+            tot_cost=cost*self.bookings
+            print(f"Total cost for {self.bookings} tickets :{tot_cost}")
+            self.tot_seats_booked += self.bookings
+            self.tot_seat_available = tot_capacity - self.tot_seats_booked
+
 u1=user()
 
 class stadium:
@@ -49,8 +53,8 @@ class stadium:
         u1.match_booked=int(input("Match to be booked:"))
         print("Seat Available:", u1.seats_available(self.tot_capacity))
         u1.name=(input("Enter Username"))
-        u1.book_ticket(self.cost)
-        print("Seat Available:",self.seats_available())
+        u1.book_ticket(self.cost,self.tot_capacity)
+        print("Seat Available:",u1.seats_available(self.tot_capacity))
 
 mumbai=stadium()
 kolkata=stadium()
