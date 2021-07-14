@@ -84,25 +84,19 @@ class user(seat, name):
         print(f"Booked on  : {self.date} {self.time}")
         if self.stadium_name == "Mumbai":
             temp_output = [[self.username, self.stadium_name,
-                            str(f"{mf.AWAY[self.match_booked-1]} X
-                                {mf.HOME[self.match_booked-1]}
-                                {mf.FORMAT[self.match_booked-1]}"),
+                            str(f"{mf.AWAY[self.match_booked-1]} X {mf.HOME[self.match_booked-1]} {mf.FORMAT[self.match_booked-1]}"),
                             str(f"{mf.DATE[self.match_booked-1]}"),
                             self.bookings, self.tot_cost,
                             self.date, self.time]]
         if self.stadium_name == "Kolkata":
             temp_output = [[self.username, self.stadium_name,
-                            str(f"{kf.AWAY[self.match_booked-1]} X
-                                {kf.HOME[self.match_booked-1]}
-                                {kf.FORMAT[self.match_booked-1]}"),
+                            str(f"{kf.AWAY[self.match_booked-1]} X {kf.HOME[self.match_booked-1]} {kf.FORMAT[self.match_booked-1]}"),
                             str(f"{kf.DATE[self.match_booked-1]}"),
                             self.bookings, self.tot_cost,
                             self.date, self.time]]
         if self.stadium_name == "Chennai":
             temp_output = [[self.username, self.stadium_name,
-                            str(f"{cf.AWAY[self.match_booked-1]} X
-                                {cf.HOME[self.match_booked-1]}
-                                {cf.FORMAT[self.match_booked-1]}"),
+                            str(f"{cf.AWAY[self.match_booked-1]} X {cf.HOME[self.match_booked-1]} {cf.FORMAT[self.match_booked-1]}"),
                             str(f"{cf.DATE[self.match_booked-1]}"),
                             self.bookings, self.tot_cost,
                             self.date, self.time]]
@@ -123,24 +117,21 @@ class user(seat, name):
                 self.tot_cost = cost*self.bookings
                 self.booking_details()
                 self.tot_seats_booked_1 += self.bookings
-                self.tot_seats_available_1 =
-                tot_capacity - self.tot_seats_booked_1
+                self.tot_seats_available_1 = tot_capacity - self.tot_seats_booked_1
         elif self.match_booked == 2:
             if self.bookings <= self.seats_available(tot_capacity,
                                                      self.match_booked):
                 self.tot_cost = cost*self.bookings
                 self.booking_details()
                 self.tot_seats_booked_2 += self.bookings
-                self.tot_seats_available_2 =
-                tot_capacity - self.tot_seats_booked_2
+                self.tot_seats_available_2 = tot_capacity - self.tot_seats_booked_2
         elif self.match_booked == 3:
             if self.bookings <= self.seats_available(tot_capacity,
                                                      self.match_booked):
                 self.tot_cost = cost*self.bookings
                 self.booking_details()
                 self.tot_seats_booked_3 += self.bookings
-                self.tot_seats_available_3 =
-                tot_capacity - self.tot_seats_booked_3
+                self.tot_seats_available_3 = tot_capacity - self.tot_seats_booked_3
 
 # Objects of user pertaining to particular stadiums
 u1 = user("Mumbai")
@@ -174,12 +165,9 @@ class stadium(cost):
     def match_schedule(self, u):
         if u.stadium_name == "Mumbai":
             print("\nSchedule is")
-            print(f"1.{mf.AWAY[0]} X {mf.HOME[0]}
-                  {mf.FORMAT[0]} on {mf.DATE[0]}")
-            print(f"2.{mf.AWAY[1]} X {mf.HOME[1]}
-                  {mf.FORMAT[1]} on {mf.DATE[1]}")
-            print(f"3.{mf.AWAY[2]} X {mf.HOME[2]}
-                  {mf.FORMAT[2]} on {mf.DATE[2]}")
+            print(f"1.{mf.AWAY[0]} X {mf.HOME[0]} {mf.FORMAT[0]} on {mf.DATE[0]}")
+            print(f"2.{mf.AWAY[1]} X {mf.HOME[1]} {mf.FORMAT[1]} on {mf.DATE[1]}")
+            print(f"3.{mf.AWAY[2]} X {mf.HOME[2]} {mf.FORMAT[2]} on {mf.DATE[2]}")
             u1.match_booked = int(input("Match to be booked:"))
             u1.display_stadium_detail(self.tot_capacity)
             u1.name_entry(input("Enter Username"))
@@ -187,12 +175,9 @@ class stadium(cost):
             u1.display_stadium_detail(self.tot_capacity)
         if u.stadium_name == "Kolkata":
             print("\nSchedule is")
-            print(f"1.{kf.AWAY[0]} X {kf.HOME[0]}
-                  {kf.FORMAT[0]} on {kf.DATE[0]}")
-            print(f"2.{kf.AWAY[1]} X {kf.HOME[1]}
-                  {kf.FORMAT[1]} on {kf.DATE[1]}")
-            print(f"3.{kf.AWAY[2]} X {kf.HOME[2]}
-                  {kf.FORMAT[2]} on {kf.DATE[2]}")
+            print(f"1.{kf.AWAY[0]} X {kf.HOME[0]} {kf.FORMAT[0]} on {kf.DATE[0]}")
+            print(f"2.{kf.AWAY[1]} X {kf.HOME[1]} {kf.FORMAT[1]} on {kf.DATE[1]}")
+            print(f"3.{kf.AWAY[2]} X {kf.HOME[2]} {kf.FORMAT[2]} on {kf.DATE[2]}")
             u2.match_booked = int(input("Match to be booked:"))
             u2.display_stadium_detail(self.tot_capacity)
             u2.name_entry(input("Enter Username"))
@@ -200,12 +185,9 @@ class stadium(cost):
             u2.display_stadium_detail(self.tot_capacity)
         if u.stadium_name == "Chennai":
             print("\nSchedule is")
-            print(f"1.{cf.AWAY[0]} X {cf.HOME[0]}
-                  {cf.FORMAT[0]} on {cf.DATE[0]}")
-            print(f"2.{cf.AWAY[1]} X {cf.HOME[1]}
-                  {cf.FORMAT[1]} on {cf.DATE[1]}")
-            print(f"3.{cf.AWAY[2]} X {cf.HOME[2]}
-                  {cf.FORMAT[2]} on {cf.DATE[2]}")
+            print(f"1.{cf.AWAY[0]} X {cf.HOME[0]} {cf.FORMAT[0]} on {cf.DATE[0]}")
+            print(f"2.{cf.AWAY[1]} X {cf.HOME[1]} {cf.FORMAT[1]} on {cf.DATE[1]}")
+            print(f"3.{cf.AWAY[2]} X {cf.HOME[2]} {cf.FORMAT[2]} on {cf.DATE[2]}")
             u3.match_booked = int(input("Match to be booked:"))
             u3.display_stadium_detail(self.tot_capacity)
             u3.name_entry(input("Enter Username"))

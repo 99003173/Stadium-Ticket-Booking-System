@@ -1,0 +1,106 @@
+runfile('C:/Users/Admin/Desktop/Stadium-Ticket-Booking-System/miniproject.py', wdir='C:/Users/Admin/Desktop/Stadium-Ticket-Booking-System')
+
+
+Which stadium to book tickets
+1)Mumbai
+2)Kolkata
+3)Chennai
+
+Choose Stadium:1
+
+Schedule is
+1.IND X AUS ODI on 10-01-2020
+2.IND X AUS TEST on 14-01-2020
+3.IND X AUS T20 on 21-01-2020
+
+Match to be booked:1
+
+Total Capacity:50000
+Total Seats Booked:0
+Total Seats Available: 50000
+
+Enter Usernameshriram
+
+Tickets(Rs1200) to Book:1
+Booked on 2021-07-14 at 13:18:00.677096
+
+Username   : shriram
+Stadium    : Mumbai
+Match      : 1
+Tickets    : 1
+Total Cost : 1200
+Booked on  : 2021-07-14 13:18:00.677096
+
+Total Capacity:50000
+Total Seats Booked:1
+Total Seats Available: 49999
+
+
+Which stadium to book tickets
+1)Mumbai
+2)Kolkata
+3)Chennai
+
+Choose Stadium:1
+
+Schedule is
+1.IND X AUS ODI on 10-01-2020
+2.IND X AUS TEST on 14-01-2020
+3.IND X AUS T20 on 21-01-2020
+
+Match to be booked:1
+
+Total Capacity:50000
+Total Seats Booked:1
+Total Seats Available: 49999
+
+Enter Usernameammu
+
+Tickets(Rs1200) to Book:3
+Booked on 2021-07-14 at 13:18:16.996850
+
+Username   : ammu
+Stadium    : Mumbai
+Match      : 1
+Tickets    : 3
+Total Cost : 3600
+Booked on  : 2021-07-14 13:18:16.996850
+
+Total Capacity:50000
+Total Seats Booked:4
+Total Seats Available: 49996
+
+
+Which stadium to book tickets
+1)Mumbai
+2)Kolkata
+3)Chennai
+
+Choose Stadium:3
+
+Schedule is
+1.IND X SA ODI on 20-12-2020
+2.IND X SA T20 on 22-12-2020
+3.IND X SA T20 on 24-12-2020
+
+Match to be booked:2
+
+Total Capacity:70000
+Total Seats Booked:0
+Total Seats Available: 70000
+
+Enter Usernameaby
+
+Tickets(Rs1000) to Book:5
+Booked on 2021-07-14 at 13:18:40.380509
+
+Username   : aby
+Stadium    : Chennai
+Match      : 2
+Tickets    : 5
+Total Cost : 5000
+Booked on  : 2021-07-14 13:18:40.380509
+
+Total Capacity:70000
+Total Seats Booked:5
+Total Seats Available: 69995
